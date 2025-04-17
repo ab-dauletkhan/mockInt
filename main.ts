@@ -1,7 +1,8 @@
 import { Bot } from 'https://deno.land/x/grammy@v1.36.0/mod.ts'
+import "jsr:@std/dotenv/load";
 
 // Create an instance of the `Bot` class and pass your bot token to it.
-const bot = new Bot('') // <-- put your bot token between the ""
+const bot = new Bot(Deno.env.get("BOT_TOKEN") as string)
 
 // You can now register listeners on your bot object `bot`.
 // grammY will call the listeners when users send messages to your bot.
