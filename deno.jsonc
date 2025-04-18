@@ -1,7 +1,7 @@
 {
 	"tasks": {
-		"start": "deno run --allow-read --allow-net --allow-env --allow-import main.ts",
-		"dev": "deno run --watch --allow-read --allow-net --allow-env --allow-import main.ts"
+		"start": "deno run --allow-read --allow-net --allow-env --allow-import src/main.ts",
+		"dev": "deno run --watch --allow-read --allow-net --allow-env --allow-import src/main.ts"
 	},
 	"lint": {
 		"rules": {
@@ -15,5 +15,11 @@
 		"semiColons": false,
 		"singleQuote": true,
 		"proseWrap": "preserve"
+	},
+	"imports": {
+		"@types/pg": "npm:@types/pg@^8.11.13",
+		"drizzle-kit": "npm:drizzle-kit@^0.31.0",
+		"drizzle-orm": "npm:drizzle-orm@^0.42.0",
+		"pg": "npm:pg@^8.14.1"
 	}
 }
